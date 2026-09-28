@@ -1,0 +1,72 @@
+body {
+  background-color:#111;
+  color: #AB966F;
+}
+
+h1 a:link, h1 a:visited {
+    color: #AB966F;
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+a:link, a:visited {
+    color: #0FF;
+}
+
+.stats {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 200px;
+    
+
+    li {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        gap: 2ch;
+    }
+
+    li.title {
+        font-weight: bold;
+    }
+
+    .header {
+        text-align: right;
+
+        &::after {
+            content: ":";
+        }
+    }
+}
+
+er-build {
+    max-width: 400px;
+    display: grid;
+    grid-template-areas: 
+        "h h"
+        "s i";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto minmax(auto, 200px);
+
+    > h2 {
+        grid-area: h;
+        text-align: center;
+    }
+
+    > ul {
+        grid-area: s;
+    }
+
+    > img {
+        grid-area: i;
+        height: 100%;
+        width: auto;
+    }
+}
+
+.build-list {
+    display: flex;
+}
